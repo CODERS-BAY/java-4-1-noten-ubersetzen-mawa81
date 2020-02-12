@@ -1,8 +1,12 @@
 package com.codersbay.wagner;
 
+import java.util.Scanner;
+
 public class TranslatingGrades {
     public static void main(String[] args) {
-        int grade = 2;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter your grade (1 to 5) to get a word representation: ");
+        int grade = scan.nextInt();
         System.out.println("grade "+grade);
         switch (grade) {
             case 1:
@@ -20,6 +24,8 @@ public class TranslatingGrades {
             case 5:
                 System.out.println("Not Sufficient");
                 break;
+            default:
+                System.out.println("The number is out of range!");
         }
     }
 }
